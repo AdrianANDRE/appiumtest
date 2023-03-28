@@ -6,7 +6,7 @@ Library  AppiumLibrary
 *** Variables ***
 ${ANDROID_AUTOMATION_NAME}    UIAutomator2
 ${ANDROID_PLATFORM_NAME}      Android
-${ANDROID_PLATFORM_VERSION}   %{ANDROID_PLATFORM_VERSION=8.1}
+${ANDROID_PLATFORM_VERSION}   8.1
 ${DIGIT_8}    id=com.android.calculator2:id/digit_8
 ${DIGIT_5}    id=com.android.calculator2:id/digit_5
 ${PLUS_BUTTON}    id=com.android.calculator2:id/op_add
@@ -21,7 +21,7 @@ Operation with calcultor
 
 *** Keywords ***
 Open Test Application
-  Open Application  http://192.168.0.229:4724/wd/hub  automationName=${ANDROID_AUTOMATION_NAME}    platformName=${ANDROID_PLATFORM_NAME}  platformVersion=${ANDROID_PLATFORM_VERSION}    deviceName=TOTO   appPackage=com.android.calculator2  appActivity=.Calculator t7
+  Open Application  http://172.26.48.1:8081/wd/hub  automationName=${ANDROID_AUTOMATION_NAME}    platformName=${ANDROID_PLATFORM_NAME}  platformVersion=${ANDROID_PLATFORM_VERSION}    deviceName=toto   appPackage=com.android.calculator2  appActivity=.Calculator t7
 
 Addition
     Click Element    ${DIGIT_8}    
